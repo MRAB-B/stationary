@@ -6,18 +6,22 @@ export default function Hero() {
     <div
       className="relative overflow-hidden bg-white"
       style={{
-        backgroundImage: "url('https://source.unsplash.com/1600x900/?stationery,writing')",
+        backgroundImage: "url('https://wallpapercave.com/wp/wp9524772.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-          <div className="sm:max-w-lg">
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <div className="sm:max-w-lg" >
+            <h1 className="font-serif text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl" style={{
+              color: 'white'
+            }}>
               Craft your thoughts with elegance
             </h1>
-            <p className="mt-4 text-xl text-gray-500">
+            <p className="mt-4 text-xl text-gray-500" style={{
+              color: 'white'
+            }}>
               Discover our curated collection of premium stationery, designed to inspire creativity and elevate your writing experience.
             </p>
           </div>
