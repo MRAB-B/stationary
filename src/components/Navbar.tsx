@@ -9,7 +9,9 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <Menu className="h-6 w-6 text-gray-600 sm:hidden" />
-            <h1 className="ml-4 text-2xl font-serif font-bold text-gray-900">Papier</h1>
+            <a href="/" className="ml-4 text-2xl font-serif font-bold text-gray-900">
+              Papier
+            </a>
           </div>
           
           <div className="hidden sm:flex space-x-8">
