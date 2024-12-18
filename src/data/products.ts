@@ -29,7 +29,7 @@ export const products: Product[] = [
     name: 'Artisan Paper Pack',
     description: 'High-quality handmade paper, perfect for special occasions',
     price: 19.99,
-    image: 'https://images.unsplash.com/photo-1598016677484-ad34c3d3e046?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80',
     category: 'paper'
   },
   {
