@@ -27,7 +27,7 @@ export default function Hero() {
           </div>
           <div className="mt-10">
             <a
-              href="#products"
+              href="/featured-products"
               className="inline-flex items-center rounded-md bg-gray-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
             >
               Shop Collection

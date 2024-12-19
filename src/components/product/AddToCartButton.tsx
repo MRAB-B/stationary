@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
+import { saveCartToLocalStorage } from '../../utils/cartStorage'; // Import the saveCartToLocalStorage function
 
 interface AddToCartButtonProps {
   productId: string;
 }
 
 export default function AddToCartButton({ productId }: AddToCartButtonProps) {
-  const { addToCart } = useCart();
+  const { addToCart, items } = useCart();  // Access `items` directly
   const [showMessage, setShowMessage] = useState(false);
 
   const handleAddToCart = () => {
+    // Add the product to the cart via context
     addToCart(productId);
+
+    // Save the updated cart to localStorage
+    saveCartToLocalStorage(items);
+
     setShowMessage(true);
 
     // Hide the message after 3 seconds

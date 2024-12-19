@@ -1,12 +1,19 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { CartItem, CartContextType, Product } from '../types';
 import { products } from '../data/products';
+import { getCartFromLocalStorage, saveCartToLocalStorage } from '../utils/cartStorage'; // Import localStorage helper functions
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([]);
+  // Initialize the cart state from localStorage
+  const [items, setItems] = useState<CartItem[]>(getCartFromLocalStorage());
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Update localStorage whenever the cart changes
+  useEffect(() => {
+    saveCartToLocalStorage(items);
+  }, [items]);
 
   const addToCart = useCallback((productId: string) => {
     setItems(currentItems => {
@@ -58,7 +65,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <CartContext.Provider value={{
-      items,
+      items, // The cart items (this is the cart data)
       addToCart,
       removeFromCart,
       updateQuantity,
