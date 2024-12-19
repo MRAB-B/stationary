@@ -29,7 +29,7 @@ export default function AddToCartButton({ productId }: AddToCartButtonProps) {
       </button>
       {showMessage && (
         <div className="absolute top-[-2rem] left-1/2 transform -translate-x-1/2 bg-green-500 text-white py-1 px-3 rounded-md shadow-md">
-          Product added to cart
+          Item added to cart
         </div>
       )}
     </div>

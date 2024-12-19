@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, Search } from 'lucide-react';
 import CartIcon from './cart/CartIcon';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 export default function Navbar() {
   return (
@@ -19,6 +20,9 @@ export default function Navbar() {
             <a href="#" className="text-gray-600 hover:text-gray-900">Pens</a>
             <a href="#" className="text-gray-600 hover:text-gray-900">Paper</a>
             <a href="#" className="text-gray-600 hover:text-gray-900">Accessories</a>
+            
+            {/* Use Link for routing */}
+            <Link to="/featured-products" className="text-gray-600 hover:text-gray-900">Products</Link>
           </div>
 
           <div className="flex items-center space-x-4">

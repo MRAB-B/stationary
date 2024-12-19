@@ -6,6 +6,7 @@ import ProductCard from './components/ProductCard';
 import CartDrawer from './components/cart/CartDrawer';
 import CheckoutForm from './components/checkout/CheckoutForm';
 import OrderSuccessPage from './pages/OrderSuccessPage';
+import FeaturedProductsPage from './pages/FeaturedProductsPage';
 import Footer from './components/Footer';
 import { products } from './data/products';
 import { CartProvider } from './context/CartContext';
@@ -19,7 +20,6 @@ const App: React.FC = () => {
           <div className="min-h-screen bg-white flex flex-col">
             <Navbar />
             <CartDrawer />
-
             <main className="flex-grow">
               <Routes>
                 <Route
@@ -42,6 +42,8 @@ const App: React.FC = () => {
                 />
                 <Route path="/checkout" element={<CheckoutForm />} />
                 <Route path="/order-success" element={<OrderSuccessPage />} />
+                <Route path="/featured-products" element={<FeaturedProductsPage />} />
+                
               </Routes>
             </main>
 
