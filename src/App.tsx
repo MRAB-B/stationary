@@ -11,6 +11,9 @@ import Footer from './components/Footer';
 import { products } from './data/products';
 import { CartProvider } from './context/CartContext';
 import { CheckoutProvider } from './context/CheckoutContext';
+import ProductManagementPage from './pages/ProductManagementPage';
+import AddProductsPage from './pages/AddProductsPage';
+import EditProductPage from './pages/EditProductPage';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +25,7 @@ const App: React.FC = () => {
             <CartDrawer />
             <main className="flex-grow">
               <Routes>
+                {/* Home Page */}
                 <Route
                   path="/"
                   element={
@@ -40,13 +44,18 @@ const App: React.FC = () => {
                     </>
                   }
                 />
+
+                {/* Existing Pages */}
                 <Route path="/checkout" element={<CheckoutForm />} />
                 <Route path="/order-success" element={<OrderSuccessPage />} />
                 <Route path="/featured-products" element={<FeaturedProductsPage />} />
-                
+
+                {/* New Pages */}
+                <Route path="/products" element={<ProductManagementPage />} />
+                <Route path="/products/add-multiple" element={<AddProductsPage />} />
+                <Route path="/products/edit/:id" element={<EditProductPage />} />
               </Routes>
             </main>
-
             <Footer />
           </div>
         </CheckoutProvider>
